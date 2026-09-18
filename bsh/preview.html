@@ -52,9 +52,8 @@ padding:14px calc(env(safe-area-inset-right) + 14px) calc(env(safe-area-inset-bo
 font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:3px 10px;border-radius:10px}
 .teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:start;gap:6px}
 .tm{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0}
-.tm .av{margin-bottom:8px}
+.tm .bdg,.tm>.av{margin-bottom:6px}
 .tm-name{font-weight:700;font-size:16px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.stars{color:var(--gold);font-size:12px;margin-left:4px;letter-spacing:1px;vertical-align:2px}
 .tm-team{color:var(--muted);font-size:12px;line-height:1.3;max-width:100%;overflow:hidden;display:-webkit-box;
 -webkit-box-orient:vertical;-webkit-line-clamp:2;overflow-wrap:anywhere;margin-top:2px}
 .tm-rec{color:var(--dim);font-size:12px;font-variant-numeric:tabular-nums;margin-top:2px}
@@ -121,15 +120,64 @@ transform:rotate(45deg);margin:-4px 4px 0 auto;transition:transform .2s}
 .u9{background-image:url(data:image/jpeg;base64,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)}
 .u10{background-image:url(data:image/jpeg;base64,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)}
 .u11{background-image:url(data:image/jpeg;base64,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)}
+.bdg{--o:calc(var(--px) * 0.3824);display:inline-flex;flex-direction:column;align-items:center;flex:none;
+margin:calc(var(--o) * .78) var(--o) 0}
+.bdg-pic{position:relative;display:block;width:var(--px);height:var(--px)}
+.bdg-pic>.av{width:100%!important;height:100%!important;box-shadow:none!important;margin:0!important}
+.bdg-f{position:absolute;left:calc(var(--o) * -1);top:calc(var(--o) * -1);width:calc(var(--px) + 2 * var(--o));
+height:calc(var(--px) + 2 * var(--o));overflow:visible;pointer-events:none;filter:drop-shadow(0 2px 3px rgba(0,0,0,.55))}
+.bdg-stars{margin-top:calc(var(--o) * .8);color:#ffc53d;font-size:calc(var(--px) * .19);line-height:1;letter-spacing:1px;
+text-shadow:0 0 6px rgba(255,197,61,.45),0 1px 1px rgba(0,0,0,.6);white-space:nowrap}
+.ring{position:relative}
+.ring::after{content:"";position:absolute;inset:-2.5px;border-radius:50%;pointer-events:none;
+-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2.5px),#000 calc(100% - 2px));
+mask:radial-gradient(farthest-side,transparent calc(100% - 2.5px),#000 calc(100% - 2px))}
+.ring-gold::after{background:conic-gradient(from 200deg,#fff4c2,#f5b82e,#8a5a0c,#f5b82e,#fff4c2,#f5b82e,#8a5a0c,#fff4c2)}
+.ring-plat::after{background:conic-gradient(from 200deg,#fff,#c9d6e3,#6b7f95,#c9d6e3,#fff,#c9d6e3,#6b7f95,#fff)}
+.ring-red::after{background:conic-gradient(from 200deg,#ffd6d2,#f0333f,#7d0a17,#f0333f,#ffd6d2,#f0333f,#7d0a17,#ffd6d2)}
+
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="bdg-m-gold" x1="0" y1="-60" x2="0" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff4c2"/><stop offset=".3" stop-color="#f5b82e"/><stop offset=".55" stop-color="#8a5a0c"/><stop offset=".78" stop-color="#f5b82e"/><stop offset="1" stop-color="#fff4c2"/></linearGradient><symbol id="bdg-gold" viewBox="-60 -60 120 120" overflow="visible">
+  <path d="M0,-57 L9,-44 L0,-35 L-9,-44Z" fill="url(#bdg-m-gold)" stroke="#4a2e05" stroke-width="1.3"/>
+  <path d="M0,-50 L4,-44 L0,-39 L-4,-44Z" fill="#5ce1ff" stroke="#4a2e05" stroke-width=".8"/>
+  <path d="M0,36 L6.5,42.5 L0,49 L-6.5,42.5Z" fill="url(#bdg-m-gold)" stroke="#4a2e05" stroke-width="1.2"/>
+  <circle cy="42.5" r="2.4" fill="#5ce1ff"/>
+  <circle r="38.5" fill="none" stroke="url(#bdg-m-gold)" stroke-width="7.5"/>
+  <circle r="34.6" fill="none" stroke="#4a2e05" stroke-width="1.4"/>
+  <circle r="42.4" fill="none" stroke="#4a2e05" stroke-width="1.2"/>
+  <path d="M-30,-24 A38.5,38.5 0 0 1 30,-24" fill="none" stroke="#fff4c2" stroke-width="1.1" opacity=".7"/></symbol><linearGradient id="bdg-m-plat" x1="0" y1="-60" x2="0" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#c9d6e3"/><stop offset=".55" stop-color="#6b7f95"/><stop offset=".78" stop-color="#c9d6e3"/><stop offset="1" stop-color="#ffffff"/></linearGradient><symbol id="bdg-plat" viewBox="-60 -60 120 120" overflow="visible">
+  <path d="M27,-29 C39,-37 47,-47 49,-58 C52,-44 47,-31 37,-21Z" fill="url(#bdg-m-plat)" stroke="#2e3a48" stroke-width="1.2"/>
+  <path d="M-27,-29 C-39,-37 -47,-47 -49,-58 C-52,-44 -47,-31 -37,-21Z" fill="url(#bdg-m-plat)" stroke="#2e3a48" stroke-width="1.2"/>
+  <path d="M0,-57 L9,-44 L0,-35 L-9,-44Z" fill="url(#bdg-m-plat)" stroke="#2e3a48" stroke-width="1.3"/>
+  <path d="M0,-50 L4,-44 L0,-39 L-4,-44Z" fill="#b28cff" stroke="#2e3a48" stroke-width=".8"/>
+  <path d="M0,36 L6.5,42.5 L0,49 L-6.5,42.5Z" fill="url(#bdg-m-plat)" stroke="#2e3a48" stroke-width="1.2"/>
+  <circle cy="42.5" r="2.4" fill="#b28cff"/>
+  <circle r="38.5" fill="none" stroke="url(#bdg-m-plat)" stroke-width="7.5"/>
+  <circle r="34.6" fill="none" stroke="#2e3a48" stroke-width="1.4"/>
+  <circle r="42.4" fill="none" stroke="#2e3a48" stroke-width="1.2"/>
+  <path d="M-30,-24 A38.5,38.5 0 0 1 30,-24" fill="none" stroke="#ffffff" stroke-width="1.1" opacity=".7"/></symbol><linearGradient id="bdg-m-red" x1="0" y1="-60" x2="0" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd6d2"/><stop offset=".3" stop-color="#f0333f"/><stop offset=".55" stop-color="#7d0a17"/><stop offset=".78" stop-color="#f0333f"/><stop offset="1" stop-color="#ffd6d2"/></linearGradient><symbol id="bdg-red" viewBox="-60 -60 120 120" overflow="visible">
+  <path d="M40,-12 C52,-20 57,-34 58,-46 C62,-30 60,-14 45,0Z" fill="url(#bdg-m-red)" stroke="#3a0309" stroke-width="1.2"/>
+  <path d="M-40,-12 C-52,-20 -57,-34 -58,-46 C-62,-30 -60,-14 -45,0Z" fill="url(#bdg-m-red)" stroke="#3a0309" stroke-width="1.2"/>
+  <path d="M41,10 L57,14 L43,22Z" fill="url(#bdg-m-red)" stroke="#3a0309" stroke-width="1.1"/>
+  <path d="M-41,10 L-57,14 L-43,22Z" fill="url(#bdg-m-red)" stroke="#3a0309" stroke-width="1.1"/>
+  <path d="M27,-29 C39,-37 47,-47 49,-58 C52,-44 47,-31 37,-21Z" fill="url(#bdg-m-red)" stroke="#3a0309" stroke-width="1.2"/>
+  <path d="M-27,-29 C-39,-37 -47,-47 -49,-58 C-52,-44 -47,-31 -37,-21Z" fill="url(#bdg-m-red)" stroke="#3a0309" stroke-width="1.2"/>
+  <path d="M0,-57 L9,-44 L0,-35 L-9,-44Z" fill="url(#bdg-m-red)" stroke="#3a0309" stroke-width="1.3"/>
+  <path d="M0,-50 L4,-44 L0,-39 L-4,-44Z" fill="#ffd24a" stroke="#3a0309" stroke-width=".8"/>
+  <path d="M0,36 L6.5,42.5 L0,49 L-6.5,42.5Z" fill="url(#bdg-m-red)" stroke="#3a0309" stroke-width="1.2"/>
+  <circle cy="42.5" r="2.4" fill="#ffd24a"/>
+  <circle r="38.5" fill="none" stroke="url(#bdg-m-red)" stroke-width="7.5"/>
+  <circle r="34.6" fill="none" stroke="#3a0309" stroke-width="1.4"/>
+  <circle r="42.4" fill="none" stroke="#3a0309" stroke-width="1.2"/>
+  <path d="M-30,-24 A38.5,38.5 0 0 1 30,-24" fill="none" stroke="#ffd6d2" stroke-width="1.1" opacity=".7"/></symbol></defs></svg>
 <header>
   <div class="top">
     <div><div class="lg">Ball So Hard University</div><div class="wk">Week 2 · 2026 · Previews</div></div>
     <div class="ct" id="count" aria-live="polite">1 / 6</div>
   </div>
-  <nav class="tabs" role="tablist" aria-label="Matchups"><button class="tab" id="t1" role="tab" aria-controls="m1" aria-selected="true" tabindex="0"><span class="tab-avs"><span class="av av-sm u0" aria-hidden="true"></span><span class="av av-sm u1" aria-hidden="true"></span></span><span class="tab-l">Billy<i>v</i>Charlie</span></button><button class="tab" id="t2" role="tab" aria-controls="m2" aria-selected="false" tabindex="-1"><span class="tab-avs"><span class="av av-sm u2" aria-hidden="true"></span><span class="av av-sm u3" aria-hidden="true"></span></span><span class="tab-l">Max<i>v</i>Alec</span></button><button class="tab" id="t3" role="tab" aria-controls="m3" aria-selected="false" tabindex="-1"><span class="tab-avs"><span class="av av-sm u4" aria-hidden="true"></span><span class="av av-sm u5" aria-hidden="true"></span></span><span class="tab-l">Dan<i>v</i>Nick</span></button><button class="tab" id="t4" role="tab" aria-controls="m4" aria-selected="false" tabindex="-1"><span class="tab-avs"><span class="av av-sm u6" aria-hidden="true"></span><span class="av av-sm u7" aria-hidden="true"></span></span><span class="tab-l">Chris<i>v</i>Aaron</span></button><button class="tab" id="t5" role="tab" aria-controls="m5" aria-selected="false" tabindex="-1"><span class="tab-avs"><span class="av av-sm u8" aria-hidden="true"></span><span class="av av-sm u9" aria-hidden="true"></span></span><span class="tab-l">Cole<i>v</i>Rob</span></button><button class="tab" id="t6" role="tab" aria-controls="m6" aria-selected="false" tabindex="-1"><span class="tab-avs"><span class="av av-sm u10" aria-hidden="true"></span><span class="av av-sm u11" aria-hidden="true"></span></span><span class="tab-l">Meech<i>v</i>Sandy</span></button></nav>
+  <nav class="tabs" role="tablist" aria-label="Matchups"><button class="tab" id="t1" role="tab" aria-controls="m1" aria-selected="true" tabindex="0"><span class="tab-avs"><span class="av av-sm u0" aria-hidden="true"></span><span class="av av-sm u1 ring ring-gold" aria-hidden="true"></span></span><span class="tab-l">Billy<i>v</i>Charlie</span></button><button class="tab" id="t2" role="tab" aria-controls="m2" aria-selected="false" tabindex="-1"><span class="tab-avs"><span class="av av-sm u2 ring ring-gold" aria-hidden="true"></span><span class="av av-sm u3 ring ring-plat" aria-hidden="true"></span></span><span class="tab-l">Max<i>v</i>Alec</span></button><button class="tab" id="t3" role="tab" aria-controls="m3" aria-selected="false" tabindex="-1"><span class="tab-avs"><span class="av av-sm u4 ring ring-gold" aria-hidden="true"></span><span class="av av-sm u5" aria-hidden="true"></span></span><span class="tab-l">Dan<i>v</i>Nick</span></button><button class="tab" id="t4" role="tab" aria-controls="m4" aria-selected="false" tabindex="-1"><span class="tab-avs"><span class="av av-sm u6 ring ring-gold" aria-hidden="true"></span><span class="av av-sm u7 ring ring-red" aria-hidden="true"></span></span><span class="tab-l">Chris<i>v</i>Aaron</span></button><button class="tab" id="t5" role="tab" aria-controls="m5" aria-selected="false" tabindex="-1"><span class="tab-avs"><span class="av av-sm u8 ring ring-plat" aria-hidden="true"></span><span class="av av-sm u9 ring ring-plat" aria-hidden="true"></span></span><span class="tab-l">Cole<i>v</i>Rob</span></button><button class="tab" id="t6" role="tab" aria-controls="m6" aria-selected="false" tabindex="-1"><span class="tab-avs"><span class="av av-sm u10 ring ring-gold" aria-hidden="true"></span><span class="av av-sm u11" aria-hidden="true"></span></span><span class="tab-l">Meech<i>v</i>Sandy</span></button></nav>
 </header>
 <main class="track" id="track">
   <article class="slide" id="m1" role="tabpanel" aria-labelledby="t1">
@@ -139,7 +187,7 @@ transform:rotate(45deg);margin:-4px 4px 0 auto;transition:transform .2s}
       <div class="teams">
         
       <div class="tm tm-a">
-        <span class="av av-lg u0" aria-hidden="true"></span>
+        <span class="bdg" style="--px:64px"><span class="bdg-pic"><span class="av av-lg u0" aria-hidden="true"></span></span><span class="bdg-stars" aria-hidden="true">&nbsp;</span></span>
         <div class="tm-name">Billy</div>
         <div class="tm-team">Chase the Sun</div>
         <div class="tm-rec">0-1</div>
@@ -147,18 +195,18 @@ transform:rotate(45deg);margin:-4px 4px 0 auto;transition:transform .2s}
         <div class="vs">VS</div>
         
       <div class="tm tm-b">
-        <span class="av av-lg u1" aria-hidden="true"></span>
-        <div class="tm-name">Charlie<span class="stars" role="img" aria-label="1 title">★</span></div>
+        <span class="bdg" style="--px:64px" role="img" aria-label="1 championship"><span class="bdg-pic"><span class="av av-lg u1" aria-hidden="true"></span><svg class="bdg-f" aria-hidden="true"><use href="#bdg-gold"/></svg></span><span class="bdg-stars" aria-hidden="true">★</span></span>
+        <div class="tm-name">Charlie</div>
         <div class="tm-team">Nacua Matata</div>
         <div class="tm-rec">1-0</div>
       </div>
       </div>
       <div class="proj">
-        <span class="proj-n">113.68</span>
+        <span class="proj-n">114.76</span>
         <span class="proj-l">Projected</span>
-        <span class="proj-n">117.94</span>
+        <span class="proj-n">118.19</span>
       </div>
-      <div class="bar" role="img" aria-label="Projected share 49.1% to 50.9%"><span style="width:49.1%"></span></div>
+      <div class="bar" role="img" aria-label="Projected share 49.3% to 50.7%"><span style="width:49.3%"></span></div>
     </section>
     <section class="card">
       <p class="blurb">Charlie has won the only meeting between these two that meant anything, the 2024 third-place game, <span class="nw">139.86-116.44</span>, and took the most recent one by 54.84. The regular season still sits at <span class="nw">4-4</span> across eight games, which is the one thing Billy has going here. Billy followed a last-place 2025 with a 97.96 loss in week 1, and heads into this one with $65 of Ja&#x27;Marr Chase, $60 of Amon-Ra St. Brown and no defense in the lineup. Charlie opened with 151.3 and carries $60 of Puka Nacua into this one.</p>
@@ -880,24 +928,24 @@ transform:rotate(45deg);margin:-4px 4px 0 auto;transition:transform .2s}
       <div class="teams">
         
       <div class="tm tm-a">
-        <span class="av av-lg u2" aria-hidden="true"></span>
-        <div class="tm-name">Max<span class="stars" role="img" aria-label="1 title">★</span></div>
+        <span class="bdg" style="--px:64px" role="img" aria-label="1 championship"><span class="bdg-pic"><span class="av av-lg u2" aria-hidden="true"></span><svg class="bdg-f" aria-hidden="true"><use href="#bdg-gold"/></svg></span><span class="bdg-stars" aria-hidden="true">★</span></span>
+        <div class="tm-name">Max</div>
         <div class="tm-team">Team Ammerman</div>
         <div class="tm-rec">1-0</div>
       </div>
         <div class="vs">VS</div>
         
       <div class="tm tm-b">
-        <span class="av av-lg u3" aria-hidden="true"></span>
-        <div class="tm-name">Alec<span class="stars" role="img" aria-label="2 titles">★★</span></div>
+        <span class="bdg" style="--px:64px" role="img" aria-label="2 championships"><span class="bdg-pic"><span class="av av-lg u3" aria-hidden="true"></span><svg class="bdg-f" aria-hidden="true"><use href="#bdg-plat"/></svg></span><span class="bdg-stars" aria-hidden="true">★★</span></span>
+        <div class="tm-name">Alec</div>
         <div class="tm-team">Carnell Instinct</div>
         <div class="tm-rec">0-1</div>
       </div>
       </div>
       <div class="proj">
-        <span class="proj-n">121.16</span>
+        <span class="proj-n">120.26</span>
         <span class="proj-l">Projected</span>
-        <span class="proj-n">117.29</span>
+        <span class="proj-n">116.50</span>
       </div>
       <div class="bar" role="img" aria-label="Projected share 50.8% to 49.2%"><span style="width:50.8%"></span></div>
     </section>
@@ -1621,26 +1669,26 @@ transform:rotate(45deg);margin:-4px 4px 0 auto;transition:transform .2s}
       <div class="teams">
         
       <div class="tm tm-a">
-        <span class="av av-lg u4" aria-hidden="true"></span>
-        <div class="tm-name">Dan<span class="stars" role="img" aria-label="1 title">★</span></div>
+        <span class="bdg" style="--px:64px" role="img" aria-label="1 championship"><span class="bdg-pic"><span class="av av-lg u4" aria-hidden="true"></span><svg class="bdg-f" aria-hidden="true"><use href="#bdg-gold"/></svg></span><span class="bdg-stars" aria-hidden="true">★</span></span>
+        <div class="tm-name">Dan</div>
         <div class="tm-team">Picken Swift Ladds</div>
         <div class="tm-rec">1-0</div>
       </div>
         <div class="vs">VS</div>
         
       <div class="tm tm-b">
-        <span class="av av-lg u5" aria-hidden="true"></span>
+        <span class="bdg" style="--px:64px"><span class="bdg-pic"><span class="av av-lg u5" aria-hidden="true"></span></span><span class="bdg-stars" aria-hidden="true">&nbsp;</span></span>
         <div class="tm-name">Nick</div>
         <div class="tm-team">Ow Now Brown Down</div>
         <div class="tm-rec">0-1</div>
       </div>
       </div>
       <div class="proj">
-        <span class="proj-n">123.37</span>
+        <span class="proj-n">120.34</span>
         <span class="proj-l">Projected</span>
-        <span class="proj-n">108.08</span>
+        <span class="proj-n">108.07</span>
       </div>
-      <div class="bar" role="img" aria-label="Projected share 53.3% to 46.7%"><span style="width:53.3%"></span></div>
+      <div class="bar" role="img" aria-label="Projected share 52.7% to 47.3%"><span style="width:52.7%"></span></div>
     </section>
     <section class="card">
       <p class="blurb">Dan went <span class="nw">3-11</span> last season and opened this one with 166.56, which is one week and proves nothing, but it is a start. Nick managed 75.72 in a week 1 loss, a poor return on $40 of De&#x27;Von Achane and $30 of Jameson Williams. The series is dead level at <span class="nw">4-4</span> over eight games, and Nick only took the last one because Emeka Egbuka posted 5.0 against a 14.4 projection for Dan, a 9.4-point hole on a 5.78 margin.</p>
@@ -2284,26 +2332,26 @@ transform:rotate(45deg);margin:-4px 4px 0 auto;transition:transform .2s}
       <div class="teams">
         
       <div class="tm tm-a">
-        <span class="av av-lg u6" aria-hidden="true"></span>
-        <div class="tm-name">Chris<span class="stars" role="img" aria-label="1 title">★</span></div>
+        <span class="bdg" style="--px:64px" role="img" aria-label="1 championship"><span class="bdg-pic"><span class="av av-lg u6" aria-hidden="true"></span><svg class="bdg-f" aria-hidden="true"><use href="#bdg-gold"/></svg></span><span class="bdg-stars" aria-hidden="true">★</span></span>
+        <div class="tm-name">Chris</div>
         <div class="tm-team">Da Bears?</div>
         <div class="tm-rec">0-1</div>
       </div>
         <div class="vs">VS</div>
         
       <div class="tm tm-b">
-        <span class="av av-lg u7" aria-hidden="true"></span>
-        <div class="tm-name">Aaron<span class="stars" role="img" aria-label="3 titles">★★★</span></div>
+        <span class="bdg" style="--px:64px" role="img" aria-label="3 championships"><span class="bdg-pic"><span class="av av-lg u7" aria-hidden="true"></span><svg class="bdg-f" aria-hidden="true"><use href="#bdg-red"/></svg></span><span class="bdg-stars" aria-hidden="true">★★★</span></span>
+        <div class="tm-name">Aaron</div>
         <div class="tm-team">reggienasty</div>
         <div class="tm-rec">1-0</div>
       </div>
       </div>
       <div class="proj">
-        <span class="proj-n">106.64</span>
+        <span class="proj-n">107.58</span>
         <span class="proj-l">Projected</span>
         <span class="proj-n">117.66</span>
       </div>
-      <div class="bar" role="img" aria-label="Projected share 47.5% to 52.5%"><span style="width:47.5%"></span></div>
+      <div class="bar" role="img" aria-label="Projected share 47.8% to 52.2%"><span style="width:47.8%"></span></div>
     </section>
     <section class="card">
       <p class="blurb">Aaron owns the regular season <span class="nw">5-1</span>, including a 0.18-point win in 2024, but Chris won the meeting that mattered, knocking Aaron out of the 2022 quarterfinal <span class="nw">141.54-122.3</span> on the way to the title. Chris also took the most recent, <span class="nw">144.0-138.12</span>, and Aaron can hang that one on Mike Evans, who scored 0.0 against a 13.2 projection in a game lost by 5.88. Aaron is <span class="nw">1-0</span> anyway after winning week 1 with just 97.86, while Chris put up 121.46 and lost. Chris has $122 tied up in two backs, $62 on Kenneth Walker and $60 on Omarion Hampton, against the $83 Aaron paid for Jahmyr Gibbs, the most expensive starter in the league.</p>
@@ -2869,26 +2917,26 @@ transform:rotate(45deg);margin:-4px 4px 0 auto;transition:transform .2s}
       <div class="teams">
         
       <div class="tm tm-a">
-        <span class="av av-lg u8" aria-hidden="true"></span>
-        <div class="tm-name">Cole<span class="stars" role="img" aria-label="2 titles">★★</span></div>
+        <span class="bdg" style="--px:64px" role="img" aria-label="2 championships"><span class="bdg-pic"><span class="av av-lg u8" aria-hidden="true"></span><svg class="bdg-f" aria-hidden="true"><use href="#bdg-plat"/></svg></span><span class="bdg-stars" aria-hidden="true">★★</span></span>
+        <div class="tm-name">Cole</div>
         <div class="tm-team">Cookin’ up a repeat 🏆🏆</div>
         <div class="tm-rec">1-0</div>
       </div>
         <div class="vs">VS</div>
         
       <div class="tm tm-b">
-        <span class="av av-lg u9" aria-hidden="true"></span>
-        <div class="tm-name">Rob<span class="stars" role="img" aria-label="2 titles">★★</span></div>
+        <span class="bdg" style="--px:64px" role="img" aria-label="2 championships"><span class="bdg-pic"><span class="av av-lg u9" aria-hidden="true"></span><svg class="bdg-f" aria-hidden="true"><use href="#bdg-plat"/></svg></span><span class="bdg-stars" aria-hidden="true">★★</span></span>
+        <div class="tm-name">Rob</div>
         <div class="tm-team">robvanderpluijm</div>
         <div class="tm-rec">0-1</div>
       </div>
       </div>
       <div class="proj">
-        <span class="proj-n">119.65</span>
+        <span class="proj-n">122.13</span>
         <span class="proj-l">Projected</span>
-        <span class="proj-n">112.49</span>
+        <span class="proj-n">114.09</span>
       </div>
-      <div class="bar" role="img" aria-label="Projected share 51.5% to 48.5%"><span style="width:51.5%"></span></div>
+      <div class="bar" role="img" aria-label="Projected share 51.7% to 48.3%"><span style="width:51.7%"></span></div>
     </section>
     <section class="card">
       <p class="blurb">The last two champions, with four rings between them: Rob won in 2015 and 2024, Cole in 2019 and 2025. The series is level at <span class="nw">4-4</span>, and Jalen Hurts cost Cole the most recent one outright, 0.4 points against a 20.6 projection, a 20.2-point shortfall in a 15.06-point loss. Week 1 has already split them: Cole won with 134.56, while Rob, with $60 on Christian McCaffrey and $58 on Jonathan Taylor, managed 83.26 and a loss.</p>
@@ -3532,24 +3580,24 @@ transform:rotate(45deg);margin:-4px 4px 0 auto;transition:transform .2s}
       <div class="teams">
         
       <div class="tm tm-a">
-        <span class="av av-lg u10" aria-hidden="true"></span>
-        <div class="tm-name">Meech<span class="stars" role="img" aria-label="1 title">★</span></div>
+        <span class="bdg" style="--px:64px" role="img" aria-label="1 championship"><span class="bdg-pic"><span class="av av-lg u10" aria-hidden="true"></span><svg class="bdg-f" aria-hidden="true"><use href="#bdg-gold"/></svg></span><span class="bdg-stars" aria-hidden="true">★</span></span>
+        <div class="tm-name">Meech</div>
         <div class="tm-team">Shoughing Cokehead</div>
         <div class="tm-rec">1-0</div>
       </div>
         <div class="vs">VS</div>
         
       <div class="tm tm-b">
-        <span class="av av-lg u11" aria-hidden="true"></span>
+        <span class="bdg" style="--px:64px"><span class="bdg-pic"><span class="av av-lg u11" aria-hidden="true"></span></span><span class="bdg-stars" aria-hidden="true">&nbsp;</span></span>
         <div class="tm-name">Sandy</div>
         <div class="tm-team">Purdy Fly for a White Guy</div>
         <div class="tm-rec">0-1</div>
       </div>
       </div>
       <div class="proj">
-        <span class="proj-n">108.14</span>
+        <span class="proj-n">107.90</span>
         <span class="proj-l">Projected</span>
-        <span class="proj-n">117.26</span>
+        <span class="proj-n">116.92</span>
       </div>
       <div class="bar" role="img" aria-label="Projected share 48.0% to 52.0%"><span style="width:48.0%"></span></div>
     </section>
