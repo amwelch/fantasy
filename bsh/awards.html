@@ -60,7 +60,7 @@ padding:calc(env(safe-area-inset-top) + 40px) calc(env(safe-area-inset-right) + 
 .recap li{display:flex;flex-direction:column;gap:2px;padding:8px 10px;border-radius:12px;background:rgba(0,0,0,.12);min-width:0}
 .recap span{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;opacity:.7;line-height:1.2}
 .recap b{font-size:15px;font-weight:900;line-height:1.2}
-.recap i{font-style:normal;font-size:12px;font-weight:700;opacity:.8}
+.recap i{font-style:normal;font-size:12px;font-weight:700;opacity:.75;white-space:nowrap}
 .home{display:inline-flex;align-items:center;min-height:48px;margin-top:22px;padding:0 20px;border-radius:24px;
 background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
 .card .in>*{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
@@ -90,20 +90,20 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
 </style>
 </head>
 <body>
-<div class="bars" aria-hidden="true"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+<div class="bars" aria-hidden="true"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
 <main class="track" id="track">
   <section class="card intro" style="--bg:#0d0d0d;--fg:#fff;--ac:#1ed760">
     <div class="in">
       <p class="eyebrow">Ball So Hard University</p>
       <h1 class="big">The<br>Awards</h1>
-      <p class="lede">Every game, draft and waiver claim since 2020. 12 awards. Nobody asked for these.</p>
+      <p class="lede">Every game, draft and waiver claim since 2020. 14 awards. Nobody asked for these.</p>
       <p class="meta">546 games · 2020 to 2026 week 2</p>
       <p class="hint">Swipe or tap to start →</p>
     </div>
   </section>
   <section class="card" style="--bg:#1db954;--fg:#0b0b0b;--ac:#0b0b0b" aria-label="The Heartbreaker">
     <div class="in">
-      <p class="eyebrow">Award 1 of 12</p>
+      <p class="eyebrow">Award 1 of 14</p>
       <h2 class="title">The Heartbreaker</h2>
       <p class="desc">Most losses by a point or less.</p>
       
@@ -123,7 +123,7 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
   </section>
   <section class="card" style="--bg:#f037a5;--fg:#fff;--ac:#ffe44d" aria-label="The Escape Artist">
     <div class="in">
-      <p class="eyebrow">Award 2 of 12</p>
+      <p class="eyebrow">Award 2 of 14</p>
       <h2 class="title">The Escape Artist</h2>
       <p class="desc">Most wins by a point or less.</p>
       
@@ -140,7 +140,7 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
   </section>
   <section class="card" style="--bg:#2d46b9;--fg:#fff;--ac:#f573a0" aria-label="The 150 Club">
     <div class="in">
-      <p class="eyebrow">Award 3 of 12</p>
+      <p class="eyebrow">Award 3 of 14</p>
       <h2 class="title">The 150 Club</h2>
       <p class="desc">Most games scoring over 150 points.</p>
       
@@ -157,7 +157,7 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
   </section>
   <section class="card" style="--bg:#ff6437;--fg:#1a0b05;--ac:#1a0b05" aria-label="The Sub-70 Society">
     <div class="in">
-      <p class="eyebrow">Award 4 of 12</p>
+      <p class="eyebrow">Award 4 of 14</p>
       <h2 class="title">The Sub-70 Society</h2>
       <p class="desc">Most games scoring under 70 points.</p>
       
@@ -174,7 +174,7 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
   </section>
   <section class="card" style="--bg:#0d0d0d;--fg:#fff;--ac:#1ed760" aria-label="Thursday Night Heroes">
     <div class="in">
-      <p class="eyebrow">Award 5 of 12</p>
+      <p class="eyebrow">Award 5 of 14</p>
       <h2 class="title">Thursday Night Heroes</h2>
       <p class="desc">Most wins where your Thursday night starters beat their projections by 30+ points combined.</p>
       
@@ -191,7 +191,7 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
   </section>
   <section class="card" style="--bg:#9bf0e1;--fg:#0a1f2e;--ac:#6b2bd6" aria-label="Ambushed on Thursday">
     <div class="in">
-      <p class="eyebrow">Award 6 of 12</p>
+      <p class="eyebrow">Award 6 of 14</p>
       <h2 class="title">Ambushed on Thursday</h2>
       <p class="desc">Most losses where your opponent&#x27;s Thursday night starters beat their projections by 30+ points combined.</p>
       
@@ -210,7 +210,7 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
   </section>
   <section class="card" style="--bg:#6b2bd6;--fg:#fff;--ac:#9bf0e1" aria-label="Monday Night Meltdown">
     <div class="in">
-      <p class="eyebrow">Award 7 of 12</p>
+      <p class="eyebrow">Award 7 of 14</p>
       <h2 class="title">Monday Night Meltdown</h2>
       <p class="desc">Most losses where your Monday night starters fell short of their projections by more than the final margin.</p>
       
@@ -228,7 +228,7 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
   </section>
   <section class="card" style="--bg:#f0e047;--fg:#1b1a06;--ac:#e22134" aria-label="Monday Night Miracle">
     <div class="in">
-      <p class="eyebrow">Award 8 of 12</p>
+      <p class="eyebrow">Award 8 of 14</p>
       <h2 class="title">Monday Night Miracle</h2>
       <p class="desc">Most wins where your Monday night starters beat their projections by more than the final margin.</p>
       
@@ -246,7 +246,7 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
   </section>
   <section class="card" style="--bg:#e22134;--fg:#fff;--ac:#f0e047" aria-label="Josh Allen Ruined My Week">
     <div class="in">
-      <p class="eyebrow">Award 9 of 12</p>
+      <p class="eyebrow">Award 9 of 14</p>
       <h2 class="title">Josh Allen Ruined My Week</h2>
       <p class="desc">Most losses where the opposing Josh Allen beat his projection by more than the final margin.</p>
       
@@ -265,7 +265,7 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
   </section>
   <section class="card" style="--bg:#1e3264;--fg:#fff;--ac:#ff9e66" aria-label="Early-Round Graveyard">
     <div class="in">
-      <p class="eyebrow">Award 10 of 12</p>
+      <p class="eyebrow">Award 10 of 14</p>
       <h2 class="title">Early-Round Graveyard</h2>
       <p class="desc">Most round 1 or 2 picks who played fewer than 4 regular season games that year. Auction picks get their round from price.</p>
       
@@ -281,7 +281,7 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
   </section>
   <section class="card" style="--bg:#ffc864;--fg:#231400;--ac:#b02a6a" aria-label="One Man&#x27;s Trash">
     <div class="in">
-      <p class="eyebrow">Award 11 of 12</p>
+      <p class="eyebrow">Award 11 of 14</p>
       <h2 class="title">One Man&#x27;s Trash</h2>
       <p class="desc">Most times dropping a player who was the top claim of the next week&#x27;s main waiver run, the first claim processed in priority order. Kickers and defenses don&#x27;t count.</p>
       
@@ -298,7 +298,7 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
   </section>
   <section class="card" style="--bg:#148a08;--fg:#fff;--ac:#cdf564" aria-label="The Bargain Bin">
     <div class="in">
-      <p class="eyebrow">Award 12 of 12</p>
+      <p class="eyebrow">Award 12 of 14</p>
       <h2 class="title">The Bargain Bin</h2>
       <p class="desc">Most round 7+ picks ($1 in an auction) who went in the first three rounds the next year.</p>
       
@@ -318,11 +318,42 @@ background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none}
                 <span class="pn">Max</span><b class="pc">1</b></li></ol>
     </div>
   </section>
+  <section class="card" style="--bg:#8d67ab;--fg:#fff;--ac:#fff3a0" aria-label="Burned by the Ex">
+    <div class="in">
+      <p class="eyebrow">Award 13 of 14</p>
+      <h2 class="title">Burned by the Ex</h2>
+      <p class="desc">Most times dropping a player who was picked up and started against you the next week in a loss, with him meeting or beating his projection.</p>
+      
+      <div class="lead">
+        <span class="av lg u12" aria-hidden="true"></span>
+        <div class="lead-n"><b class="num" data-n="1">1</b><span class="unit">time</span></div>
+      </div>
+      <p class="who">Meech <span class="co">Tied with Max</span></p>
+      <p class="moment">Dropped Zay Jones in 2022. Dan picked him up and started him in week 10: 10.8 on a 6.5 projection in a <span class="nw">100.52-91.76</span> loss.</p>
+      <ol class="podium"><li class="pod"><span class="rk">1</span><span class="av sm u7" aria-hidden="true"></span>
+                <span class="pn">Max</span><b class="pc">1</b></li></ol>
+    </div>
+  </section>
+  <section class="card" style="--bg:#27856a;--fg:#fff;--ac:#ffc864" aria-label="The Revenge Tour">
+    <div class="in">
+      <p class="eyebrow">Award 14 of 14</p>
+      <h2 class="title">The Revenge Tour</h2>
+      <p class="desc">Most times picking up a player an opponent dropped and starting him against them the next week in a win, with him meeting or beating his projection.</p>
+      
+      <div class="lead">
+        <span class="av lg u9" aria-hidden="true"></span>
+        <div class="lead-n"><b class="num" data-n="2">2</b><span class="unit">times</span></div>
+      </div>
+      <p class="who">Dan</p>
+      <p class="moment">Picked up Zay Jones after Meech dropped him in 2022, then started him against them in week 10: 10.8 on a 6.5 projection in a <span class="nw">100.52-91.76</span> win.</p>
+      <ol class="podium"></ol>
+    </div>
+  </section>
   <section class="card outro" style="--bg:#1db954;--fg:#0b0b0b;--ac:#0b0b0b">
     <div class="in">
       <p class="eyebrow">That's a wrap</p>
       <h2 class="title">The winners</h2>
-      <ol class="recap"><li><span>The Heartbreaker</span><b>Teddy</b><i>4 losses</i></li><li><span>The Escape Artist</span><b>Rob, Charlie, Aaron</b><i>3 wins</i></li><li><span>The 150 Club</span><b>Chris</b><i>12 games</i></li><li><span>The Sub-70 Society</span><b>Teddy</b><i>5 games</i></li><li><span>Thursday Night Heroes</span><b>Chris, Cole</b><i>2 wins</i></li><li><span>Ambushed on Thursday</span><b>Sandy, Nick, Alec, Billy, Rob</b><i>1 loss</i></li><li><span>Monday Night Meltdown</span><b>Chris</b><i>6 losses</i></li><li><span>Monday Night Miracle</span><b>Charlie</b><i>5 wins</i></li><li><span>Josh Allen Ruined My Week</span><b>Cole, Nick, Meech, Chris, Aaron</b><i>1 loss</i></li><li><span>Early-Round Graveyard</span><b>Teddy</b><i>2 picks</i></li><li><span>One Man&#x27;s Trash</span><b>Nick</b><i>9 drops</i></li><li><span>The Bargain Bin</span><b>Aaron</b><i>3 picks</i></li></ol>
+      <ol class="recap"><li><span>The Heartbreaker</span><b>Teddy <i>4 losses</i></b></li><li><span>The Escape Artist</span><b>Rob, Charlie, Aaron <i>3 wins</i></b></li><li><span>The 150 Club</span><b>Chris <i>12 games</i></b></li><li><span>The Sub-70 Society</span><b>Teddy <i>5 games</i></b></li><li><span>Thursday Night Heroes</span><b>Chris, Cole <i>2 wins</i></b></li><li><span>Ambushed on Thursday</span><b>Sandy, Nick, Alec, Billy, Rob <i>1 loss</i></b></li><li><span>Monday Night Meltdown</span><b>Chris <i>6 losses</i></b></li><li><span>Monday Night Miracle</span><b>Charlie <i>5 wins</i></b></li><li><span>Josh Allen Ruined My Week</span><b>Cole, Nick, Meech, Chris, Aaron <i>1 loss</i></b></li><li><span>Early-Round Graveyard</span><b>Teddy <i>2 picks</i></b></li><li><span>One Man&#x27;s Trash</span><b>Nick <i>9 drops</i></b></li><li><span>The Bargain Bin</span><b>Aaron <i>3 picks</i></b></li><li><span>Burned by the Ex</span><b>Meech, Max <i>1 time</i></b></li><li><span>The Revenge Tour</span><b>Dan <i>2 times</i></b></li></ol>
       <a class="home" href="../">All league pages</a>
     </div>
   </section></main>
